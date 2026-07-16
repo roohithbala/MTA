@@ -109,7 +109,24 @@ section h2 {
     2px 2px 0px #e5e5e5, 
     3px 3px 0px #d4d4d4, 
     4px 4px 0px #a3a3a3;
+  animation: blink 1.5s infinite;
 }
+
+@keyframes blink {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+    text-shadow: 
+      1px 1px 0px #fff, 
+      2px 2px 0px #e5e5e5, 
+      3px 3px 0px #d4d4d4, 
+      4px 4px 0px #a3a3a3;
+  }
+  20%, 24%, 55% {
+    opacity: 0.3;
+    text-shadow: none;
+  }
+}
+
 
 .font-sans-showcase {
   font-family: var(--font-sans);
