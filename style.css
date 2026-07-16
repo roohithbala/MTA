@@ -95,7 +95,6 @@ section h2 {
   letter-spacing: -0.01em;
 }
 
-/* Typography Showcase */
 .text-3d-neon {
   font-family: var(--font-display);
   font-size: clamp(1.8rem, 4vw, 2.5rem);
@@ -103,7 +102,6 @@ section h2 {
   color: #171717;
   letter-spacing: 0.05em;
   margin: 1rem 0;
-  /* Minimalist subtle double drop shadow for a clean offset 3D effect instead of bright neon */
   text-shadow: 
     1px 1px 0px #fff, 
     2px 2px 0px #e5e5e5, 
@@ -126,7 +124,6 @@ section h2 {
     text-shadow: none;
   }
 }
-
 
 .font-sans-showcase {
   font-family: var(--font-sans);
@@ -181,7 +178,6 @@ abbr {
   cursor: help;
 }
 
-/* Media Grid */
 .media-grid {
   display: flex;
   flex-direction: column;
@@ -212,14 +208,12 @@ figcaption {
   border: 1px solid var(--border-color);
 }
 
-/* Objects & Embeds */
 iframe, object, embed {
   width: 100%;
   border: 1px solid var(--border-color);
   border-radius: 8px;
 }
 
-/* Semantic Elements */
 details {
   border: 1px solid var(--border-color);
   border-radius: 6px;
@@ -259,7 +253,6 @@ th {
   background: #f4f4f5;
 }
 
-/* Footer */
 footer {
   max-width: 800px;
   margin: 4rem auto 0 auto;

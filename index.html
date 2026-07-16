@@ -3,47 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Complete HTML Media, Graphics &amp; Typography Showcase</title>
-  <meta name="description" content="A comprehensive showcase of every image, audio, video, and graphic tag in HTML, styled with a modern neon-synthwave CSS theme.">
+  <title>Typography &amp; Media Showcase</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header id="top">
     <h1>All-Media Showcase</h1>
-    <p>A comprehensive demonstration utilizing every HTML5 multimedia, graphics, and typography tag.</p>
     <nav>
       <a href="#typography">Typography</a>
-      <a href="#images-graphics">Images &amp; Graphics</a>
+      <a href="#images-graphics">Images</a>
       <a href="#audio-video">Audio &amp; Video</a>
-      <a href="#embeds">Embeds &amp; Objects</a>
-      <a href="#hyperlinks-hypermedia">Hyperlinks &amp; Hypermedia</a>
-      <a href="#elements">Semantic Elements</a>
+      <a href="#embeds">Embeds</a>
+      <a href="#hyperlinks">Hyperlinks</a>
+      <a href="#elements">Structure</a>
     </nav>
   </header>
 
   <main>
-    <!-- Typography Showcase Section -->
     <section id="typography">
       <h2>Typography &amp; Text Styles</h2>
       
       <article>
-        <h3>3D Retro-Neon Display </h3>
+        <h3>3D Retro-Neon Display</h3>
         <div class="text-3d-neon">NEON GRID</div>
       </article>
 
       <article style="margin-top: 2rem;">
-        <h3>Sans-Serif Style (Inter)</h3>
+        <h3>Sans-Serif Style</h3>
         <p class="font-sans-showcase">
-          This is styled with <strong>Inter</strong>. It features tags like <b>bold</b>, <i>italic</i>, <u>underlined</u>, <s>strikethrough</s>, and <small>small text</small>. 
-          We can show subscripts (H<sub>2</sub>O) and superscripts (E = mc<sup>2</sup>). Here is a <mark>marked segment</mark> and an abbreviation: <abbr title="World Wide Web">WWW</abbr>.
+          This is styled with Inter. It features standard bold and italic formatting.
         </p>
       </article>
 
       <article style="margin-top: 2rem;">
-        <h3>Elegant Serif Style (Playfair Display)</h3>
+        <h3>Elegant Serif Style</h3>
         <p class="font-serif-showcase">
-          Classic serif typography for editorial and block quotes:
+          Classic serif typography for editorial and block quotes.
         </p>
         <blockquote>
           "Simplicity is the ultimate sophistication."
@@ -51,43 +47,25 @@
         </blockquote>
       </article>
 
-
       <article style="margin-top: 2rem;">
-        <h3>Handwritten Script Style (Caveat)</h3>
+        <h3>Handwritten Script Style</h3>
         <p class="font-handwritten-showcase">
           This font mimics handwritten notes, annotations, or quick personal signatures.
         </p>
       </article>
     </section>
 
-    <!-- Images & Graphics Section -->
     <section id="images-graphics">
-      <h2>Images, Vectors &amp; Graphic Elements</h2>
+      <h2>Images &amp; Graphics</h2>
       
       <div class="media-grid">
-        <!-- Responsive Picture Element -->
         <div>
-          <h3>1. Responsive Picture Element (&lt;picture&gt;)</h3>
-          <picture>
-            <!-- Large screens might display a different layout, here we fall back cleanly to our local hero image -->
-            <source media="(min-width: 1024px)" srcset="hero.png">
-            <source media="(min-width: 640px)" srcset="hero.png">
-            <img src="hero.png" alt="Futuristic Synthwave Landscape" usemap="#heromap" style="width: 100%; border-radius: 16px; border: 1px solid var(--border-color);">
-          </picture>
-          
-          <!-- Image Map (usemap) -->
-          <map name="heromap">
-            <area shape="rect" coords="0,0,300,300" alt="Left Area" href="#top" title="Go to top">
-            <area shape="circle" coords="400,200,80" alt="Sun/Center Area" href="#images-graphics" title="Graphics Section">
-          </map>
-          <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem; text-align: center;">
-            This image uses an <code>&lt;map&gt;</code> with interactive <code>&lt;area&gt;</code> hotspots (Click left to scroll to top).
-          </p>
+          <h3>Standard Image</h3>
+          <img src="hero.png" alt="Futuristic Synthwave Landscape" style="width: 100%; border-radius: 16px; border: 1px solid var(--border-color);">
         </div>
 
-        <!-- Inline SVG Vector -->
         <div>
-          <h3>2. Vector Graphic (&lt;svg&gt;)</h3>
+          <h3>Vector Graphic</h3>
           <div style="background: rgba(0,0,0,0.2); border-radius: 16px; padding: 1.5rem; border: 1px solid var(--border-color); display: flex; justify-content: center; align-items: center; min-height: 250px;">
             <svg width="200" height="200" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
               <defs>
@@ -102,111 +80,66 @@
             </svg>
           </div>
         </div>
-
-
-        <!-- Figure & Figcaption -->
-        <div>
-          <h3>4. Caption Image (&lt;figure&gt; &amp; &lt;figcaption&gt;)</h3>
-          <figure>
-            <img src="hero.png" alt="Synthwave Scene" style="width:100%; border-radius: 16px; border:1px solid var(--border-color);">
-            <figcaption>Figure 1: Grid mountains and retro sunset glow.</figcaption>
-          </figure>
-        </div>
       </div>
     </section>
-    <!-- Audio & Video Section -->
+
     <section id="audio-video">
       <h2>Audio &amp; Video Media Elements</h2>
       
       <div class="media-grid">
-        <!-- HTML5 Audio -->
         <div class="audio-card">
-          <h3>1. Audio element (&lt;audio&gt;)</h3>
+          <h3>Audio element</h3>
           <audio controls preload="metadata">
             <source src="alexzavesa-calm-elegant-logo-519008.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
           </audio>
-          <p style="font-size: 0.85rem; color: var(--text-muted);">
-            Includes local MP3 source.
-          </p>
         </div>
 
-        <!-- HTML5 Video -->
         <div class="video-card">
-          <h3>2. Video element (&lt;video&gt;)</h3>
+          <h3>Video element</h3>
           <video controls preload="metadata" poster="hero.png">
             <source src="276047_medium.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
-          <p style="font-size: 0.85rem; color: var(--text-muted);">
-            Includes local MP4 video source and poster thumbnail.
-          </p>
         </div>
       </div>
     </section>
 
-    <!-- Embeds & External Objects Section -->
     <section id="embeds">
-      <h2>Embeds, Objects &amp; Iframes (&lt;embed&gt;, &lt;object&gt;, &lt;iframe&gt;)</h2>
-      <p style="margin-bottom: 1.5rem;">For embedding external interactive programs, documents, plugins, or third-party web content.</p>
+      <h2>External Embeds</h2>
       
       <div class="media-grid">
-        <!-- iframe container -->
         <div>
-          <h3>1. Inline Frame (&lt;iframe&gt;)</h3>
+          <h3>YouTube Video</h3>
           <iframe width="560" height="315" src="https://www.youtube.com/embed/xHiA_cvTrjk?si=FQTeSCOq2ZV1_EqD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="width: 100%; height: 200px; border-radius: 12px; border: 1px solid var(--border-color); background: rgba(0,0,0,0.15);"></iframe>
-        </div>
-
-        <!-- object container -->
-        <div>
-          <h3>2. Multimedia Object (&lt;object&gt;)</h3>
-          <object data="hero.png" type="image/png" style="width: 100%; height: 200px; border-radius: 12px; border: 1px solid var(--border-color); overflow: hidden;">
-            <p>Fallback text: Your browser doesn't support embedding this object.</p>
-          </object>
-        </div>
-
-        <!-- embed container -->
-        <div>
-          <h3>3. Generic External Embed (&lt;embed&gt;)</h3>
-          <embed src="hero.png" type="image/png" style="width: 100%; height: 200px; border-radius: 12px; border: 1px solid var(--border-color);">
         </div>
       </div>
     </section>
 
-    <!-- Hyperlinks & Hypermedia Section -->
-    <section id="hyperlinks-hypermedia">
+    <section id="hyperlinks">
       <h2>Hyperlinks &amp; Interactive Hypermedia</h2>
-      <p style="margin-bottom: 1.5rem;">
-        Hyperlinks connect documents, while hypermedia embeds interactive clickable links directly inside multimedia formats (like SVGs or Image Maps).
-      </p>
 
       <div class="media-grid">
-        <!-- Hyperlink Types -->
         <div>
-          <h3>Standard Hyperlink Variations</h3>
+          <h3>Standard Hyperlinks</h3>
           <ul style="margin: 1rem 0 0 1.5rem; display: flex; flex-direction: column; gap: 0.75rem;">
             <li>
-              <strong>External Link:</strong> 
-              <a href="https://github.com/roohithbala/MTA" target="_blank" rel="noopener noreferrer">Visit GitHub Repository</a> (Opens in new tab)
+              <a href="https://github.com/roohithbala/MTA" target="_blank" rel="noopener noreferrer">Visit GitHub Repository</a>
             </li>
             <li>
-              <strong>File Download:</strong> 
-              <a href="hero.png" download="synthwave_landscape.png">Download Hero Image Asset</a> (Uses download attribute)
+              <a href="hero.png" download="synthwave_landscape.png">Download Hero Image Asset</a>
             </li>
             <li>
-              <strong>Email Link:</strong> 
               <a href="mailto:roohithbala@outlook.com?subject=Showcase%20Feedback">Email Support</a>
             </li>
             <li>
-              <strong>Phone Call Link:</strong> 
               <a href="tel:+919578046603">Call Support Hotline (+91 9578046603)</a>
             </li>
           </ul>
         </div>
 
-        <!-- Hypermedia: SVG Link & Media Fragments -->
         <div>
-          <h3>Interactive Vector Hypermedia (SVG Link)</h3>
+          <h3>Interactive Vector Hypermedia</h3>
           <div style="background: rgba(0,0,0,0.2); border-radius: 16px; padding: 1.5rem; border: 1px solid var(--border-color); display: flex; flex-direction: column; align-items: center; gap: 1rem;">
             <svg width="120" height="120" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
               <a href="#top" title="Click to scroll to header">
@@ -215,17 +148,13 @@
                 <text x="50" y="85" font-family="'Space Grotesk', sans-serif" font-size="8" fill="#fff" text-anchor="middle" font-weight="bold">SCROLL TO TOP</text>
               </a>
             </svg>
-            <p style="font-size: 0.85rem; color: var(--text-muted); text-align: center;">
-              This SVG includes a native HTML anchor <code>&lt;a&gt;</code> wrapping the inner shapes. Click the pink triangle to jump back to top.
-            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Semantic Elements Section -->
     <section id="elements">
-      <h2>Semantic Elements &amp; Structure</h2>
+      <h2>Structure &amp; Details</h2>
       
       <div class="details-box">
         <details>
@@ -240,22 +169,17 @@
             </thead>
             <tbody>
               <tr>
-                <td><code>&lt;picture&gt;</code></td>
+                <td>picture</td>
                 <td>Graphics</td>
                 <td>Art-directed responsive images</td>
               </tr>
               <tr>
-                <td><code>&lt;svg&gt;</code></td>
+                <td>svg</td>
                 <td>Graphics</td>
                 <td>Scalable vector graphics</td>
               </tr>
               <tr>
-                <td><code>&lt;canvas&gt;</code></td>
-                <td>Graphics</td>
-                <td>Dynamic scripting pixel rendering</td>
-              </tr>
-              <tr>
-                <td><code>&lt;audio&gt;</code> &amp; <code>&lt;video&gt;</code></td>
+                <td>audio &amp; video</td>
                 <td>Multimedia</td>
                 <td>Native media streaming</td>
               </tr>
