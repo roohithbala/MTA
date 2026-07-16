@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@700;800&display=swap');
 
 :root {
-  --bg-color: #fafafa;
-  --text-main: #171717;
-  --text-muted: #666666;
-  --border-color: #e5e5e5;
-  --primary: #000000;
-  --accent: #525252;
+  --bg-color: #0b0f19;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --primary: #f43f5e;
+  --secondary: #0ea5e9;
+  --accent: #10b981;
   --font-sans: 'Inter', sans-serif;
   --font-display: 'Syne', sans-serif;
   --font-subheading: 'Space Grotesk', sans-serif;
@@ -39,9 +40,11 @@ header {
 
 header h1 {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 800;
-  color: var(--text-main);
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   letter-spacing: -0.02em;
   margin-bottom: 0.5rem;
 }
@@ -49,7 +52,7 @@ header h1 {
 header p {
   font-family: var(--font-sans);
   font-size: 1.1rem;
-  color: var(--text-muted);
+  color: #38bdf8;
 }
 
 nav {
@@ -61,16 +64,17 @@ nav {
 
 nav a {
   font-family: var(--font-subheading);
-  color: var(--text-main);
+  color: #a7f3d0;
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: 500;
   border-bottom: 1px solid transparent;
-  transition: border-color 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 nav a:hover {
-  border-bottom: 1px solid var(--text-main);
+  color: #fb7185;
+  border-bottom: 1px solid #fb7185;
 }
 
 main {
@@ -88,25 +92,30 @@ section {
 
 section h2 {
   font-family: var(--font-subheading);
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 700;
-  color: var(--text-main);
+  color: var(--secondary);
   margin-bottom: 2rem;
   letter-spacing: -0.01em;
+}
+
+h3 {
+  color: var(--accent);
+  margin-bottom: 0.5rem;
 }
 
 .text-3d-neon {
   font-family: var(--font-display);
   font-size: clamp(1.8rem, 4vw, 2.5rem);
   font-weight: 800;
-  color: #171717;
+  color: #ffffff;
   letter-spacing: 0.05em;
   margin: 1rem 0;
   text-shadow: 
-    1px 1px 0px #fff, 
-    2px 2px 0px #e5e5e5, 
-    3px 3px 0px #d4d4d4, 
-    4px 4px 0px #a3a3a3;
+    1px 1px 0px #fb7185, 
+    2px 2px 0px #f43f5e, 
+    3px 3px 0px #be123c, 
+    4px 4px 8px rgba(0, 0, 0, 0.9);
   animation: blink 1.5s infinite;
 }
 
@@ -114,10 +123,10 @@ section h2 {
   0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
     opacity: 1;
     text-shadow: 
-      1px 1px 0px #fff, 
-      2px 2px 0px #e5e5e5, 
-      3px 3px 0px #d4d4d4, 
-      4px 4px 0px #a3a3a3;
+      1px 1px 0px #fb7185, 
+      2px 2px 0px #f43f5e, 
+      3px 3px 0px #be123c, 
+      4px 4px 8px rgba(0, 0, 0, 0.9);
   }
   20%, 24%, 55% {
     opacity: 0.3;
@@ -127,55 +136,48 @@ section h2 {
 
 .font-sans-showcase {
   font-family: var(--font-sans);
+  color: #c084fc;
 }
 
 .font-serif-showcase {
   font-family: var(--font-serif);
   font-size: 1.1rem;
+  color: #fbbf24;
 }
 
 blockquote {
   font-family: var(--font-serif);
   font-style: italic;
-  border-left: 2px solid var(--text-main);
+  border-left: 2px solid var(--primary);
   padding-left: 1.25rem;
   margin: 1.5rem 0;
-  color: var(--text-muted);
+  color: #cbd5e1;
 }
 
 cite {
   font-family: var(--font-sans);
   font-size: 0.85rem;
   font-style: normal;
-  color: var(--text-muted);
+  color: #f43f5e;
   display: block;
   margin-top: 0.5rem;
 }
 
-.font-mono-showcase {
-  font-family: var(--font-mono);
-  background: #f4f4f5;
-  padding: 1.25rem;
-  border-radius: 6px;
-  font-size: 0.9rem;
-  border: 1px solid var(--border-color);
-}
-
 .font-handwritten-showcase {
   font-family: var(--font-handwritten);
-  font-size: 1.8rem;
-  color: #404040;
+  font-size: 2.2rem;
+  color: #f472b6;
 }
 
-mark {
-  background: #fef08a;
-  color: #171717;
-  padding: 0.1rem 0.2rem;
+a {
+  color: #22d3ee;
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
-abbr {
-  text-decoration: underline dotted var(--text-muted);
-  cursor: help;
+a:hover {
+  color: #facc15;
+  text-decoration: underline;
 }
 
 .media-grid {
@@ -208,7 +210,7 @@ figcaption {
   border: 1px solid var(--border-color);
 }
 
-iframe, object, embed {
+iframe {
   width: 100%;
   border: 1px solid var(--border-color);
   border-radius: 8px;
@@ -219,13 +221,14 @@ details {
   border-radius: 6px;
   padding: 1rem;
   margin-bottom: 1rem;
-  background: #fafafa;
+  background: rgba(255, 255, 255, 0.02);
 }
 
 summary {
   font-family: var(--font-subheading);
   font-weight: 600;
   cursor: pointer;
+  color: #38bdf8;
 }
 
 details p {
@@ -249,8 +252,12 @@ th, td {
 th {
   font-family: var(--font-subheading);
   font-weight: 600;
-  color: var(--text-main);
-  background: #f4f4f5;
+  color: #a7f3d0;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+td {
+  color: #cbd5e1;
 }
 
 footer {
