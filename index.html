@@ -18,6 +18,7 @@
       <a href="#images-graphics">Images &amp; Graphics</a>
       <a href="#audio-video">Audio &amp; Video</a>
       <a href="#embeds">Embeds &amp; Objects</a>
+      <a href="#hyperlinks-hypermedia">Hyperlinks &amp; Hypermedia</a>
       <a href="#elements">Semantic Elements</a>
     </nav>
   </header>
@@ -192,6 +193,56 @@ function renderCanvas() {
         <div>
           <h3>3. Generic External Embed (&lt;embed&gt;)</h3>
           <embed src="hero.png" type="image/png" style="width: 100%; height: 200px; border-radius: 12px; border: 1px solid var(--border-color);">
+        </div>
+      </div>
+    </section>
+
+    <!-- Hyperlinks & Hypermedia Section -->
+    <section id="hyperlinks-hypermedia">
+      <h2>Hyperlinks &amp; Interactive Hypermedia</h2>
+      <p style="margin-bottom: 1.5rem;">
+        Hyperlinks connect documents, while hypermedia embeds interactive clickable links directly inside multimedia formats (like SVGs or Image Maps).
+      </p>
+
+      <div class="media-grid">
+        <!-- Hyperlink Types -->
+        <div>
+          <h3>Standard Hyperlink Variations</h3>
+          <ul style="margin: 1rem 0 0 1.5rem; display: flex; flex-direction: column; gap: 0.75rem;">
+            <li>
+              <strong>External Link:</strong> 
+              <a href="https://github.com/roohithbala/MTA" target="_blank" rel="noopener noreferrer">Visit GitHub Repository</a> (Opens in new tab)
+            </li>
+            <li>
+              <strong>File Download:</strong> 
+              <a href="hero.png" download="synthwave_landscape.png">Download Hero Image Asset</a> (Uses download attribute)
+            </li>
+            <li>
+              <strong>Email Link:</strong> 
+              <a href="mailto:support@example.com?subject=Showcase%20Feedback">Email Support</a>
+            </li>
+            <li>
+              <strong>Phone Call Link:</strong> 
+              <a href="tel:+15550199">Call Support Hotline (+1 555 0199)</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Hypermedia: SVG Link & Media Fragments -->
+        <div>
+          <h3>Interactive Vector Hypermedia (SVG Link)</h3>
+          <div style="background: rgba(0,0,0,0.2); border-radius: 16px; padding: 1.5rem; border: 1px solid var(--border-color); display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+            <svg width="120" height="120" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <a href="#top" title="Click to scroll to header">
+                <rect x="5" y="5" width="90" height="90" rx="15" fill="none" stroke="#06b6d4" stroke-width="3" />
+                <polygon points="50,20 80,70 20,70" fill="#ec4899" />
+                <text x="50" y="85" font-family="'Space Grotesk', sans-serif" font-size="8" fill="#fff" text-anchor="middle" font-weight="bold">SCROLL TO TOP</text>
+              </a>
+            </svg>
+            <p style="font-size: 0.85rem; color: var(--text-muted); text-align: center;">
+              This SVG includes a native HTML anchor <code>&lt;a&gt;</code> wrapping the inner shapes. Click the pink triangle to jump back to top.
+            </p>
+          </div>
         </div>
       </div>
     </section>
