@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complete HTML Media, Graphics &amp; Typography Showcase</title>
+  <meta name="description" content="A comprehensive showcase of every image, audio, video, and graphic tag in HTML, styled with a modern neon-synthwave CSS theme.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header id="top">
+    <h1>All-Media Showcase</h1>
+    <p>A comprehensive demonstration utilizing every HTML5 multimedia, graphics, and typography tag.</p>
+    <nav>
+      <a href="#typography">Typography</a>
+      <a href="#images-graphics">Images &amp; Graphics</a>
+      <a href="#audio-video">Audio &amp; Video</a>
+      <a href="#embeds">Embeds &amp; Objects</a>
+      <a href="#elements">Semantic Elements</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Typography Showcase Section -->
+    <section id="typography">
+      <h2>Typography &amp; Text Styles</h2>
+      
+      <article>
+        <h3>Sans-Serif Style (Inter)</h3>
+        <p class="font-sans-showcase">
+          This is styled with <strong>Inter</strong>. It features tags like <b>bold</b>, <i>italic</i>, <u>underlined</u>, <s>strikethrough</s>, and <small>small text</small>. 
+          We can show subscripts (H<sub>2</sub>O) and superscripts (E = mc<sup>2</sup>). Here is a <mark>marked segment</mark> and an abbreviation: <abbr title="World Wide Web">WWW</abbr>.
+        </p>
+      </article>
+
+      <article style="margin-top: 2rem;">
+        <h3>Elegant Serif Style (Playfair Display)</h3>
+        <p class="font-serif-showcase">
+          Classic serif typography for editorial and block quotes:
+        </p>
+        <blockquote>
+          "Simplicity is the ultimate sophistication."
+          <cite>— Leonardo da Vinci</cite>
+        </blockquote>
+      </article>
+
+      <article style="margin-top: 2rem;">
+        <h3>Monospace &amp; Computer Output (JetBrains Mono)</h3>
+        <p>Using <code>&lt;pre&gt;</code>, <code>&lt;code&gt;</code>, <code>&lt;kbd&gt;</code>, <code>&lt;samp&gt;</code>, and <code>&lt;var&gt;</code> tags:</p>
+        <div class="font-mono-showcase">
+          <p>Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to exit the program.</p>
+          <p>Sample Output: <samp>Error 404: Not Found</samp></p>
+          <p>Mathematical formula: Let <var>x</var> be the variable representing <var>y</var> + 1.</p>
+          <pre><code>// JavaScript Function
+function renderCanvas() {
+  const canvas = document.getElementById('demoCanvas');
+  console.log('Rendering text dynamically');
+}</code></pre>
+        </div>
+      </article>
+
+      <article style="margin-top: 2rem;">
+        <h3>Handwritten Script Style (Caveat)</h3>
+        <p class="font-handwritten-showcase">
+          This font mimics handwritten notes, annotations, or quick personal signatures.
+        </p>
+      </article>
+    </section>
+
+    <!-- Images & Graphics Section -->
+    <section id="images-graphics">
+      <h2>Images, Vectors &amp; Graphic Elements</h2>
+      
+      <div class="media-grid">
+        <!-- Responsive Picture Element -->
+        <div>
+          <h3>1. Responsive Picture Element (&lt;picture&gt;)</h3>
+          <picture>
+            <!-- Large screens might display a different layout, here we fall back cleanly to our local hero image -->
+            <source media="(min-width: 1024px)" srcset="hero.png">
+            <source media="(min-width: 640px)" srcset="hero.png">
+            <img src="hero.png" alt="Futuristic Synthwave Landscape" usemap="#heromap" style="width: 100%; border-radius: 16px; border: 1px solid var(--border-color);">
+          </picture>
+          
+          <!-- Image Map (usemap) -->
+          <map name="heromap">
+            <area shape="rect" coords="0,0,300,300" alt="Left Area" href="#top" title="Go to top">
+            <area shape="circle" coords="400,200,80" alt="Sun/Center Area" href="#images-graphics" title="Graphics Section">
+          </map>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem; text-align: center;">
+            This image uses an <code>&lt;map&gt;</code> with interactive <code>&lt;area&gt;</code> hotspots (Click left to scroll to top).
+          </p>
+        </div>
+
+        <!-- Inline SVG Vector -->
+        <div>
+          <h3>2. Vector Graphic (&lt;svg&gt;)</h3>
+          <div style="background: rgba(0,0,0,0.2); border-radius: 16px; padding: 1.5rem; border: 1px solid var(--border-color); display: flex; justify-content: center; align-items: center; min-height: 250px;">
+            <svg width="200" height="200" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="neonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#ec4899" />
+                  <stop offset="100%" stop-color="#06b6d4" />
+                </linearGradient>
+              </defs>
+              <circle cx="50" cy="50" r="40" stroke="url(#neonGrad)" stroke-width="4" fill="none" />
+              <polygon points="50,25 75,70 25,70" fill="url(#neonGrad)" opacity="0.8" />
+              <text x="50" y="93" font-family="'Space Grotesk', sans-serif" font-size="8" fill="#fff" text-anchor="middle">INLINE SVG</text>
+            </svg>
+          </div>
+        </div>
+
+        <!-- HTML5 Canvas -->
+        <div>
+          <h3>3. Programmatic Graphics (&lt;canvas&gt;)</h3>
+          <div style="background: rgba(0,0,0,0.2); border-radius: 16px; padding: 1rem; border: 1px solid var(--border-color); display: flex; flex-direction: column; align-items: center;">
+            <canvas id="demoCanvas" width="300" height="150" style="background: #111; border-radius: 8px; max-width: 100%;"></canvas>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">
+              Rendered in real-time using the HTML5 2D Canvas API.
+            </p>
+          </div>
+        </div>
+
+        <!-- Figure & Figcaption -->
+        <div>
+          <h3>4. Caption Image (&lt;figure&gt; &amp; &lt;figcaption&gt;)</h3>
+          <figure>
+            <img src="hero.png" alt="Synthwave Scene" style="width:100%; border-radius: 16px; border:1px solid var(--border-color);">
+            <figcaption>Figure 1: Grid mountains and retro sunset glow.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Audio & Video Section -->
+    <section id="audio-video">
+      <h2>Audio &amp; Video Media Elements</h2>
+      
+      <div class="media-grid">
+        <!-- HTML5 Audio -->
+        <div class="audio-card">
+          <h3>1. Audio element (&lt;audio&gt;) with sources</h3>
+          <audio controls preload="metadata">
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.ogg" type="audio/ogg">
+            <track kind="captions" src="captions.vtt" srclang="en" label="English Captions" default>
+            Your browser does not support the audio element.
+          </audio>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">
+            Includes multiple <code>&lt;source&gt;</code> tags and an accessibility <code>&lt;track&gt;</code>.
+          </p>
+        </div>
+
+        <!-- HTML5 Video -->
+        <div class="video-card">
+          <h3>2. Video element (&lt;video&gt;) with subtitles</h3>
+          <video controls preload="metadata" poster="hero.png">
+            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+            <track kind="subtitles" src="subtitles_en.vtt" srclang="en" label="English" default>
+            Your browser does not support the video tag.
+          </video>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">
+            Includes video controls, poster thumbnail, alternative sources, and tracks.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Embeds & External Objects Section -->
+    <section id="embeds">
+      <h2>Embeds, Objects &amp; Iframes (&lt;embed&gt;, &lt;object&gt;, &lt;iframe&gt;)</h2>
+      <p style="margin-bottom: 1.5rem;">For embedding external interactive programs, documents, plugins, or third-party web content.</p>
+      
+      <div class="media-grid">
+        <!-- iframe container -->
+        <div>
+          <h3>1. Inline Frame (&lt;iframe&gt;)</h3>
+          <iframe src="about:blank" style="width: 100%; height: 200px; border-radius: 12px; border: 1px solid var(--border-color); background: rgba(0,0,0,0.15);" title="Sample blank iframe sandbox"></iframe>
+        </div>
+
+        <!-- object container -->
+        <div>
+          <h3>2. Multimedia Object (&lt;object&gt;)</h3>
+          <object data="hero.png" type="image/png" style="width: 100%; height: 200px; border-radius: 12px; border: 1px solid var(--border-color); overflow: hidden;">
+            <p>Fallback text: Your browser doesn't support embedding this object.</p>
+          </object>
+        </div>
+
+        <!-- embed container -->
+        <div>
+          <h3>3. Generic External Embed (&lt;embed&gt;)</h3>
+          <embed src="hero.png" type="image/png" style="width: 100%; height: 200px; border-radius: 12px; border: 1px solid var(--border-color);">
+        </div>
+      </div>
+    </section>
+
+    <!-- Semantic Elements & Form Section -->
+    <section id="elements">
+      <h2>Interactive &amp; Semantic Form</h2>
+      
+      <div class="details-box">
+        <details>
+          <summary>View Layout tags and description table</summary>
+          <table>
+            <thead>
+              <tr>
+                <th>Tag</th>
+                <th>Category</th>
+                <th>Standard Usage</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>&lt;picture&gt;</code></td>
+                <td>Graphics</td>
+                <td>Art-directed responsive images</td>
+              </tr>
+              <tr>
+                <td><code>&lt;svg&gt;</code></td>
+                <td>Graphics</td>
+                <td>Scalable vector graphics</td>
+              </tr>
+              <tr>
+                <td><code>&lt;canvas&gt;</code></td>
+                <td>Graphics</td>
+                <td>Dynamic scripting pixel rendering</td>
+              </tr>
+              <tr>
+                <td><code>&lt;audio&gt;</code> &amp; <code>&lt;video&gt;</code></td>
+                <td>Multimedia</td>
+                <td>Native media streaming</td>
+              </tr>
+            </tbody>
+          </table>
+        </details>
+      </div>
+
+      <form id="feedback" action="#" method="get" onsubmit="event.preventDefault(); alert('Settings Saved!');">
+        <h3>Interactive Preferences</h3>
+        
+        <fieldset style="border: 1px solid var(--border-color); padding: 1.5rem; border-radius: 12px;">
+          <legend style="padding: 0 0.5rem; font-family: var(--font-subheading); color: var(--primary);">Options &amp; Selection</legend>
+          
+          <div class="form-group">
+            <label for="name">Showcase Name</label>
+            <input type="text" id="name" name="name" placeholder="Visual Explorer" required>
+          </div>
+
+          <div class="form-group" style="margin-top: 1rem;">
+            <label for="format">Preferred Media</label>
+            <select id="format" name="format">
+              <optgroup label="Static Graphics">
+                <option value="png">PNG Image</option>
+                <option value="svg">SVG Vector</option>
+              </optgroup>
+              <optgroup label="Streaming/Scripted">
+                <option value="canvas">Canvas Rendering</option>
+                <option value="video">HTML5 Video</option>
+              </optgroup>
+            </select>
+          </div>
+        </fieldset>
+
+        <button type="submit" style="margin-top: 1rem;">Save Preferences</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Synthwave Media Gallery. Fully compliant HTML5 showcase.</p>
+    <p><a href="#top">Back to top</a></p>
+  </footer>
+
+  <!-- Simple script to initialize Canvas content -->
+  <script>
+    window.onload = function() {
+      const canvas = document.getElementById('demoCanvas');
+      if (canvas && canvas.getContext) {
+        const ctx = canvas.getContext('2d');
+        // Clear background
+        ctx.fillStyle = '#0f111a';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        
+        // Draw synthwave retro grid lines
+        ctx.strokeStyle = 'rgba(6, 182, 212, 0.4)';
+        ctx.lineWidth = 1;
+        
+        // Horizontal grid lines
+        for (let y = 80; y < canvas.height; y += 10) {
+          ctx.beginPath();
+          ctx.moveTo(0, y);
+          ctx.lineTo(canvas.width, y);
+          ctx.stroke();
+        }
+        
+        // Perspective vertical lines
+        const vanishingPointX = canvas.width / 2;
+        const vanishingPointY = 60;
+        for (let x = -50; x <= canvas.width + 50; x += 30) {
+          ctx.beginPath();
+          ctx.moveTo(vanishingPointX, vanishingPointY);
+          ctx.lineTo(x, canvas.height);
+          ctx.stroke();
+        }
+        
+        // Draw a glowing sun
+        let gradient = ctx.createRadialGradient(canvas.width/2, 50, 5, canvas.width/2, 50, 35);
+        gradient.addColorStop(0, '#ec4899');
+        gradient.addColorStop(0.5, '#a855f7');
+        gradient.addColorStop(1, 'transparent');
+        ctx.fillStyle = gradient;
+        ctx.beginPath();
+        ctx.arc(canvas.width/2, 50, 35, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    };
+  </script>
+</body>
+</html>
